@@ -13,8 +13,6 @@ public class FindMax {
         while (size > 20);
 
         array = new int[size];
-        int arrayIndex[];
-        arrayIndex = new int[size];
         int i = 0;
         while (i< array.length){
             System.out.print("Enter element" + (i+1)+" : ");
@@ -27,27 +25,20 @@ public class FindMax {
         }
         int max = array[0];
         int index = 1;
-        int count = 0;
+        String indexOf = "";
         for (int j = 0; j<array.length;j++){
             if (array[j] > max) {
                 max = array[j];
 //                index = j+1;
-                count ++;
+//                indexOf = indexOf + index +", ";
             }
         }
-        System.out.println("The largest property value in the list is " + max );
-        for (int n = 0; n< array.length; n++){
-            for (int j =0; j< array.length;){
-                if (array[n] == max){
-                    index = n+1;
-                    arrayIndex[j] = index;
-                    j++;
-                }
+        for (int j = 0; j<array.length;j++){
+            if (array[j] == max) {
+                index = j+1;
+                indexOf = indexOf + index +", ";
             }
-
         }
-        for (int j =0; j< arrayIndex.length;j++){
-            System.out.println("at position " + arrayIndex[j]);
-        }
+        System.out.println("The largest property value in the list is " + max + " at position: " + indexOf );
     }
 }
