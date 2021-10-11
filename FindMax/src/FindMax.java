@@ -36,7 +36,7 @@ public class FindMax {
         for (int j = 0; j<array.length;j++){
             if (array[j] == max) {
                 index = j+1;
-                indexOf = indexOf + index +", ";
+                indexOf = indexOf + index +" ";
             }
         }
         System.out.println("The largest property value in the list is " + max + " at position: " + indexOf );
